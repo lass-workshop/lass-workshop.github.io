@@ -14,10 +14,20 @@
 
 <body>
 
+    <style>
+    .top-left h1{
+      /* 随屏幕宽度缩放，最小 22px，最大 36px */
+      font-size: clamp(1.375rem, 4vw + 0.5rem, 2.25rem);
+      line-height: 1.25;
+      margin: 0;
+      word-break: break-word;    /* 超长单词也能断 */
+    }    
+    </style>
+
     <div class="banner">
         <img src="assets/banner.jpg" alt="Conference Template Banner">
         <div class="top-left">
-            <h1>The 1st Workshop on LASS: LLM Agent for Social Simulation</h1>
+            <h1>The 1st Workshop on LASS:<br> LLM Agent for Social Simulation</h1>
         </div>
         <div class="bottom-right">
             June 31, 2025 <br> Seoul, Korea
