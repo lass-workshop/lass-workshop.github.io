@@ -1,144 +1,115 @@
-<!DOCTYPE html>  
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <base href="..">
-    <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
-    <link rel="stylesheet" type="text/css" media="all" href="assets/main.css"/>
-    <script type="text/javascript" async
-        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=default">
-    </script>
-    <meta name="description" content="Conference Template">
-    <meta name="resource-type" content="document">
-    <meta name="distribution" content="global">
-    <meta name="KeyWords" content="Conference">
-    <title>Program | Conference Template</title>
-
-    <style>
-    .top-left h1 {
-        /* 随屏幕宽度缩放，最小 22px，最大 36px */
-        font-size: clamp(1.375rem, 4vw + 0.5rem, 2.25rem);
-        line-height: 1.25;
-        margin: 0;
-        word-break: break-word;
+  <meta charset="UTF-8">
+  <title>Organizing Committee</title>
+  <style>
+    .people-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 24px;
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
     }
 
-    /* 放大日程表中时间的字体 */
-    .date {
-        font-size: 1.25rem;  /* 约等于20px，可按需调整 */
-        font-weight: bold;
+    .person {
+      text-align: center;
+      font-family: sans-serif;
     }
-    </style>
+
+    .person img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .person-name {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .person-affiliation {
+      font-size: 0.85em;
+      color: #555;
+      padding: 0 10px;
+    }
+
+    @media (max-width: 800px) {
+      .people-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 500px) {
+      .people-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-    <div class="banner">
-        <img src="assets/banner.jpg" alt="Conference Template Banner">
-        <div class="top-left">
-            <h1>Workshop on LASS: LLM Agent for Social Simulation</h1>
-        </div>
-        <div class="bottom-right">
-            June 31, 2025 <br> Seoul, Korea
-        </div>
-    </div>
+<h2 style="text-align:center;">Organizing Committee</h2>
 
-    <table class="navigation">
-        <tr>
-            <td class="navigation">
-                <a class="current" title="Conference Home Page" href=".">Home</a>
-            </td>
-            <td class="navigation">
-                <a title="Register for the Conference" href="registration">Committee</a>
-            </td>
-            <td class="navigation">
-                <a title="Conference Program" href="program">Program</a> 
-            </td>
-            <!-- <td class="navigation"> -->
-            <!--     <a title="Directions to the Conference" href="directions">Directions</a> -->
-            <!-- </td> -->
-            <!-- <td class="navigation"> -->
-            <!--     <a title="Conference Flyer" href="flyer">Flyer</a> -->
-            <!-- </td> -->
-        </tr>
-    </table>
+<div class="people-grid">
+  <div class="person">
+    <img src="photos/yige.jpg" alt="Yige Yuan">
+    <div class="person-name">Yige Yuan</div>
+    <div class="person-affiliation">University of Chinese Academy of Sciences</div>
+  </div>
+  <div class="person">
+    <img src="photos/junkai.jpg" alt="Junkai Zhou">
+    <div class="person-name">Junkai Zhou</div>
+    <div class="person-affiliation">University of Chinese Academy of Sciences</div>
+  </div>
+  <div class="person">
+    <img src="photos/bingbing.jpg" alt="Bingbing Xu">
+    <div class="person-name">Bingbing Xu</div>
+    <div class="person-affiliation">CAS Key Laboratory of AI Safety, ICT, CAS</div>
+  </div>
+  <div class="person">
+    <img src="photos/du.jpg" alt="Du Su">
+    <div class="person-name">Du Su</div>
+    <div class="person-affiliation">CAS Key Laboratory of AI Safety, ICT, CAS</div>
+  </div>
+  <div class="person">
+    <img src="photos/an.jpg" alt="An Zhang">
+    <div class="person-name">An Zhang</div>
+    <div class="person-affiliation">School of IST, USTC</div>
+  </div>
+  <div class="person">
+    <img src="photos/liang.jpg" alt="Liang Pang">
+    <div class="person-name">Liang Pang</div>
+    <div class="person-affiliation">CAS Key Laboratory of AI Safety, ICT, CAS</div>
+  </div>
+  <div class="person">
+    <img src="photos/teng.jpg" alt="Teng Xiao">
+    <div class="person-name">Teng Xiao</div>
+    <div class="person-affiliation">AI2 & University of Washington</div>
+  </div>
+  <div class="person">
+    <img src="photos/fengli.jpg" alt="Fengli Xu">
+    <div class="person-name">Fengli Xu</div>
+    <div class="person-affiliation">Tsinghua University</div>
+  </div>
+  <div class="person">
+    <img src="photos/zhaochun.jpg" alt="Zhaochun Ren">
+    <div class="person-name">Zhaochun Ren</div>
+    <div class="person-affiliation">Leiden University</div>
+  </div>
+  <div class="person">
+    <img src="photos/xu.jpg" alt="Xu Chen">
+    <div class="person-name">Xu Chen</div>
+    <div class="person-affiliation">Renmin University</div>
+  </div>
+</div>
 
-    <h2>Conference Program</h2>
-
-    <table>
-        <tr>
-            <td class="date" rowspan="8">08:30</td>
-            <td class="title-special">Opening Remarks from Co-Chairs</td>
-        </tr>
-        <tr>
-            <td class="abstract"></td>
-        </tr>
-    </table>
-
-    <table>
-        <tr>
-            <td class="date" rowspan="8">08:40</td>
-            <td class="title-special">Keynote Talk #1 followed by Q&amp;A</td>
-        </tr>
-        <tr>
-            <td class="abstract"></td>
-        </tr>
-    </table>
-
-    <table>
-        <tr>
-            <td class="date" rowspan="8">09:10</td>
-            <td class="title-special">Paper Session #1</td>
-        </tr>
-        <tr>
-            <td class="abstract"></td>
-        </tr>
-    </table>
-
-    <table>
-        <tr>
-            <td class="date" rowspan="8">10:20</td>
-            <td class="title-special">Coffee Break</td>
-        </tr>
-        <tr>
-            <td class="abstract"></td>
-        </tr>
-    </table>
-
-    <table>
-        <tr>
-            <td class="date" rowspan="8">10:30</td>
-            <td class="title-special">Keynote Talk #2 followed by Q&amp;A</td>
-        </tr>
-        <tr>
-            <td class="abstract"></td>
-        </tr>
-    </table>
-
-    <table>
-        <tr>
-            <td class="date" rowspan="8">11:00</td>
-            <td class="title-special">Paper Session #2</td>
-        </tr>
-        <tr>
-            <td class="abstract"></td>
-        </tr>
-    </table>
-
-    <table>
-        <tr>
-            <td class="date" rowspan="8">12:20</td>
-            <td class="title-special">Awards &amp; Closing Remarks</td>
-        </tr>
-        <tr>
-            <td class="abstract"></td>
-        </tr>
-    </table>
-
-    <footer>
+<footer>
         &copy; Conference Organizers
         &nbsp;|&nbsp; Design by <a href="https://github.com/mikepierce">Mike Pierce</a>
-    </footer>
+</footer>
 
 </body>
 </html>
