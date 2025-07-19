@@ -14,14 +14,66 @@
 
 <body>
 
+    <!-- 全局统一字体和段落缩进／对齐 -->
     <style>
     .top-left h1{
-      /* 随屏幕宽度缩放，最小 22px，最大 36px */
-      font-size: clamp(1.375rem, 4vw + 0.5rem, 2.25rem);
-      line-height: 1.25;
-      margin: 0;
-      word-break: break-word;    /* 超长单词也能断 */
-    }    
+        /* 随屏幕宽度缩放，最小 22px，最大 36px */
+        font-size: clamp(1.375rem, 4vw + 0.5rem, 2.25rem);
+        line-height: 1.25;
+        margin: 0;
+        word-break: break-word;
+    }
+        
+      /* 正文字体：可根据需要替换为自己喜欢的字体 */
+      body,
+      p, li, dt, dd {
+        font-family: Arial, sans-serif;
+        font-size: 15px;
+        line-height: 1.6;
+        color: #333;
+      }
+
+      /* 统一段落缩进：首行缩进 2em；段落之间自动分隔 */
+      p,
+      li {
+        text-indent: 2em;
+        margin: 0 0 1em 0;
+      }
+
+      /* 定义标题与正文对齐保持左对齐 */
+      h1, h2, h3, h4 {
+        font-family: Arial, sans-serif;
+        text-align: left;
+        margin: 1em 0 0.5em 0;
+      }
+
+      /* 调整标题字体大小 */
+      h1 {
+        font-size: 2rem; /* 原来较大，现调小为2rem */
+      }
+      h2 {
+        font-size: 1.5rem; /* 统一二级标题为1.5rem */
+      }
+
+      /* 列表、定义列表项同样首行缩进、统一外边距 */
+      ul, ol {
+        padding-left: 2em;
+        margin: 0 0 1em 0;
+      }
+      dl {
+        padding-left: 2em;
+        margin: 0 0 1em 0;
+      }
+      dt, dd {
+        margin: 0;
+      }
+
+      /* 定制二级标题下的左侧装饰 */
+      .section-decor {
+        color: #222;
+        border-left: 4px solid #666;
+        padding-left: 12px;
+      }
     </style>
     
     <div class="banner">
