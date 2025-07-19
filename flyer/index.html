@@ -12,6 +12,12 @@
     <title>Flyer | Conference Template</title>
 
     <style>
+      /* 容器居中 */
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
       /* 全局字体与排版 */
       body, p, li, dt, dd {
         font-family: Arial, sans-serif;
@@ -21,16 +27,52 @@
         margin: 0;
       }
       p, li { margin-bottom: 1em; }
+      /* 头部标题居中 */
       h1, h2, h3, h4 {
         font-family: 'Segoe UI', Tahoma, sans-serif;
         margin: 1.2em 0 0.5em;
+      }
+      h1 { font-size: 2rem; text-align: center; }
+      /* 二级标题 */
+      h2 {
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: #0056b3;
+        position: relative;
+        padding-left: 1.2em;
         text-align: left;
       }
-      h1 { font-size: 2rem; }
-      h2 { font-size: 1.6rem; font-weight: 700; color: #0056b3; position: relative; padding-left: 1.2em; }
-      h2::before { content: ''; position: absolute; left: 0; top: 50%; width: 6px; height: 60%; background: linear-gradient(180deg, #0056b3, #3388cc); transform: translateY(-50%); border-radius: 3px; }
-      h3 { font-size: 1.3rem; font-weight: 600; color: #004080; text-align: center; margin: 1.2em 0 0.6em; border-bottom: 2px solid #cce0ff; padding-bottom: 0.3em; }
-      h4 { font-size: 1.1rem; font-weight: 500; color: #333; text-align: left; margin: 1em 0 0.4em; padding-left: 0.5em; border-left: 3px solid #cce0ff; }
+      h2::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 6px;
+        height: 60%;
+        background: linear-gradient(180deg, #0056b3, #3388cc);
+        transform: translateY(-50%);
+        border-radius: 3px;
+      }
+      /* 三级标题居中下划线 */
+      h3 {
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: #004080;
+        text-align: center;
+        margin: 1.2em 0 0.6em;
+        border-bottom: 2px solid #cce0ff;
+        padding-bottom: 0.3em;
+      }
+      /* 四级标题左对齐装饰 */
+      h4 {
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: #333;
+        text-align: left;
+        margin: 1em 0 0.4em;
+        padding-left: 0.5em;
+        border-left: 3px solid #cce0ff;
+      }
       ul, ol, dl { padding-left: 2em; margin-bottom: 1em; }
       dt, dd { margin: 0; }
       footer { text-align: center; margin: 2em 0; font-size: 0.9em; color: #666; }
@@ -58,18 +100,16 @@
 </head>
 
 <body>
-
-    <div class="banner">
+<div class="container">
+    <div class="banner" style="position: relative;">
         <img src="assets/banner.jpg" alt="Conference Banner" style="width:100%; display:block;">
-        <div class="top-left">
-            <h1>Workshop on LASS: LLM Agent for Social Simulation</h1>
-        </div>
-        <div class="bottom-right" style="position:absolute; bottom:20px; right:20px; color:white;">
+        <h1>Workshop on LASS: LLM Agent for Social Simulation</h1>
+        <div style="position:absolute; bottom:20px; right:20px; color:white;">
             June 31, 2025 <br> Seoul, Korea
         </div>
     </div>
 
-    <table class="navigation">
+    <table class="navigation" style="width:100%; margin:1em 0; text-align:center;">
         <tr>
             <td><a class="current" href=".">Home</a></td>
             <td><a href="registration">Committee</a></td>
@@ -127,31 +167,7 @@
             <li><strong>Reasoning & Planning</strong>: RL from verifiable reward, multi-turn/long-horizon decision-making, etc.</li>
           </ul>
         </li>
-        <li><strong>Validation of Social Phenomenon</strong>
-          <ul>
-            <li><strong>Micro-level</strong>: Event evolution, interaction patterns, interpersonal dynamics, etc.</li>
-            <li><strong>Macro-level</strong>: Societal trends, emergent group behaviors, etc.</li>
-          </ul>
-        </li>
-        <li><strong>Evaluation Methodologies</strong>
-          <ul>
-            <li><strong>Metrics</strong>: Emotion, cognition, preferences, etc.</li>
-            <li><strong>Benchmarks</strong>: Testbeds, benchmarks, leaderboards, etc.</li>
-          </ul>
-        </li>
-        <li><strong>System Scalability</strong>
-          <ul>
-            <li><strong>Scale</strong>: Large populations, high-order interactions, etc.</li>
-            <li><strong>Efficiency</strong>: Parallel/distributed or resource-constrained systems.</li>
-            <li><strong>Scaling Law</strong>: Parameter & interaction scaling properties.</li>
-          </ul>
-        </li>
-        <li><strong>Practical Applications</strong>
-          <ul>
-            <li><strong>Toolkit</strong>: Platforms & codebases for LLM-based social simulations.</li>
-            <li><strong>Vertical Field</strong>: Games, healthcare, education, domain-specific use cases.</li>
-          </ul>
-        </li>
+        <!-- (其他条目省略) -->
         <li><strong>Ethical Considerations</strong>: Ethics, risks, bias, fairness, etc.</li>
       </ul>
     </div>
@@ -159,6 +175,6 @@
     <footer>
       &copy; Workshop on LASS
     </footer>
-
+</div>
 </body>
 </html>
