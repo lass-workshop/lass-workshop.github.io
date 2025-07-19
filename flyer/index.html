@@ -10,202 +10,155 @@
     <meta name="distribution" content="global">
     <meta name="KeyWords" content="Conference">
     <title>Flyer | Conference Template</title>
-</head>
 
-<body>
-
-    <!-- 全局统一字体和段落缩进／对齐 -->
     <style>
-    .top-left h1{
-        /* 随屏幕宽度缩放，最小 22px，最大 36px */
-        font-size: clamp(1.375rem, 4vw + 0.5rem, 2.25rem);
-        line-height: 1.25;
-        margin: 0;
-        word-break: break-word;
-    }
-        
-      /* 正文字体：可根据需要替换为自己喜欢的字体 */
-      body,
-      p, li, dt, dd {
+      /* 全局字体与排版 */
+      body, p, li, dt, dd {
         font-family: Arial, sans-serif;
         font-size: 15px;
         line-height: 1.6;
         color: #333;
-      }
-
-      /* 统一段落缩进：首行缩进 2em；段落之间自动分隔 */
-      p,
-      li {
-        text-indent: 2em;
-        margin: 0 0 1em 0;
-      }
-
-      /* 定义标题与正文对齐保持左对齐 */
-      h1, h2, h3, h4 {
-        font-family: Arial, sans-serif;
-        text-align: left;
-        margin: 1em 0 0.5em 0;
-      }
-
-      /* 调整标题字体大小 */
-      h1 {
-        font-size: 2rem; /* 原来较大，现调小为2rem */
-      }
-      h2 {
-        font-size: 1.5rem; /* 统一二级标题为1.5rem */
-      }
-
-      /* 列表、定义列表项同样首行缩进、统一外边距 */
-      ul, ol {
-        padding-left: 2em;
-        margin: 0 0 1em 0;
-      }
-      dl {
-        padding-left: 2em;
-        margin: 0 0 1em 0;
-      }
-      dt, dd {
         margin: 0;
       }
-
-      /* 定制二级标题下的左侧装饰 */
-      .section-decor {
-        color: #222;
-        border-left: 4px solid #666;
-        padding-left: 12px;
-      }
-
-    /* 三级标题 h3：稍小于 h2，但比正文更醒目 */
-      h3 {
-        font-size: 1.3rem;
-        font-weight: 600;
-        color: #004080;
-        text-align: center;
-        margin: 1.2em 0 0.6em;
-        border-bottom: 2px solid #cce0ff;
-        padding-bottom: 0.3em;
-      }
-    
-      /* 四级标题 h4：比 h3 更小，保持左对齐 */
-      h4 {
-        font-size: 1.1rem;
-        font-weight: 500;
-        color: #333;
+      p, li { margin-bottom: 1em; }
+      h1, h2, h3, h4 {
+        font-family: 'Segoe UI', Tahoma, sans-serif;
+        margin: 1.2em 0 0.5em;
         text-align: left;
-        margin: 1em 0 0.4em;
-        padding-left: 0.5em;
-        border-left: 3px solid #cce0ff;
       }
-    
+      h1 { font-size: 2rem; }
+      h2 { font-size: 1.6rem; font-weight: 700; color: #0056b3; position: relative; padding-left: 1.2em; }
+      h2::before { content: ''; position: absolute; left: 0; top: 50%; width: 6px; height: 60%; background: linear-gradient(180deg, #0056b3, #3388cc); transform: translateY(-50%); border-radius: 3px; }
+      h3 { font-size: 1.3rem; font-weight: 600; color: #004080; text-align: center; margin: 1.2em 0 0.6em; border-bottom: 2px solid #cce0ff; padding-bottom: 0.3em; }
+      h4 { font-size: 1.1rem; font-weight: 500; color: #333; text-align: left; margin: 1em 0 0.4em; padding-left: 0.5em; border-left: 3px solid #cce0ff; }
+      ul, ol, dl { padding-left: 2em; margin-bottom: 1em; }
+      dt, dd { margin: 0; }
+      footer { text-align: center; margin: 2em 0; font-size: 0.9em; color: #666; }
+
+      /* Submission Requirements 段落对齐 */
+      .submission-req p {
+        text-indent: 2em;
+        text-align: justify;
+      }
+      .submission-req li {
+        text-indent: 0;
+        text-align: left;
+      }
+
+      /* Call for Papers 区分主次标题 */
+      .call-for-papers > ul > li > strong {
+        font-size: 1.2rem;
+        color: #0056b3;
+      }
+      .call-for-papers ul ul li strong {
+        font-size: 1rem;
+        color: #333;
+      }
     </style>
-    
+</head>
+
+<body>
+
     <div class="banner">
-        <img src="assets/banner.jpg" alt="Conference Template Banner">
+        <img src="assets/banner.jpg" alt="Conference Banner" style="width:100%; display:block;">
         <div class="top-left">
             <h1>Workshop on LASS: LLM Agent for Social Simulation</h1>
         </div>
-        <div class="bottom-right">
+        <div class="bottom-right" style="position:absolute; bottom:20px; right:20px; color:white;">
             June 31, 2025 <br> Seoul, Korea
         </div>
     </div>
 
     <table class="navigation">
         <tr>
-            <td class="navigation"><a class="current" title="Conference Home Page" href=".">Home</a></td>
-            <td class="navigation"><a title="Committee" href="registration">Committee</a></td>
-            <td class="navigation"><a title="Conference Program" href="program">Program</a></td>
-            <td class="navigation"><a title="Conference Flyer" href="flyer">Call for Papers</a></td>
+            <td><a class="current" href=".">Home</a></td>
+            <td><a href="registration">Committee</a></td>
+            <td><a href="program">Program</a></td>
+            <td><a href="flyer">Call for Papers</a></td>
         </tr>
     </table>
 
-    <br>
-
-    <h2 class="section-decor">Important Dates</h2>
+    <h2>Important Dates</h2>
     <dl>
       <dt><strong>Submission Open</strong></dt>
       <dd>25 July, 2025</dd>
-
       <dt><strong>Submission Deadline</strong></dt>
       <dd>31 August, 2025</dd>
-
-      <dt><strong>Paper Acceptance Notification (highly desirable) </strong></dt>
+      <dt><strong>Paper Acceptance Notification</strong></dt>
       <dd>30 September, 2025</dd>
-
       <dt><strong>Camera-Ready Submission</strong></dt>
       <dd>01 November, 2025</dd>
     </dl>
 
-  <h2>Submission Website</h2>
-  <p>
-    Please submit your papers via OpenReview: <br>
-    <a href="https://easychair.org/conferences/?conf=cikm2025-lass" target="_blank">
-      https://easychair.org/conferences/?conf=cikm2025-lass
-    </a>
-  </p>
+    <h2>Submission Website</h2>
+    <p>
+      Please submit via EasyChair:<br>
+      <a href="https://easychair.org/conferences/?conf=cikm2025-lass" target="_blank">
+        https://easychair.org/conferences/?conf=cikm2025-lass
+      </a>
+    </p>
 
-  <h2>Submission Requirements</h2>
-  <p>
-    Authors are invited to submit original, full-length research papers that have not been published previously, accepted for publication, or are currently under review elsewhere.
-    Submissions should meet the standards of top-tier international research conferences.
-  </p>
-  <p>
-    Manuscripts must be submitted in PDF format through the CIKM 2025 EasyChair submission site. Papers should follow the official
-    <a href="https://www.acm.org/publications/proceedings-template" target="_blank">ACM sigconf two-column template</a>.
-  </p>
-  <ul>
-    <li>Full papers: maximum 9 pages (including appendix), plus unlimited pages for references and GenAI usage disclosure.</li>
-    <li>Any appendix must be included within the 9-page limit (excluding references).</li>
-    <li>Double-blind review: submissions must be properly anonymized; non-anonymized papers will be desk-rejected.</li>
-    <li>Rejected full papers will not be considered for short paper acceptance.</li>
-    <li>LLM-generated text is prohibited unless part of experimental analysis. AI tools may only be used for light editing.</li>
-  </ul>
-
-  <h2>Call for Papers</h2>
-  <ul>
-    <li><strong>Alignment with Social Value</strong>
+    <div class="submission-req">
+      <h2>Submission Requirements</h2>
+      <p>
+        Authors are invited to submit original, full-length research papers that have not been published previously, accepted elsewhere, or under review.
+      </p>
+      <p>
+        Manuscripts must be PDF using the
+        <a href="https://www.acm.org/publications/proceedings-template" target="_blank">ACM sigconf two-column template</a>.
+      </p>
       <ul>
-        <li><strong>Environment Construction</strong>: Text, virtual, embodied, etc.</li>
-        <li><strong>Agent Architecture</strong>: Mechanism or module such as memory, perception, preference, reflection, action, etc.</li>
-        <li><strong>Alignment and Personalization</strong>: Reinforcement learning from human feedback, offline preference optimization, inference-time alignment, multi-dimensional alignment and role play, etc.</li>
-        <li><strong>Reasoning & Planning</strong>: Reinforcement learning from verifiable reward, multi-turn/long-horizon decision-making, etc.</li>
+        <li>Full papers: max 9 pages (including appendix), + unlimited refs & GenAI disclosure.</li>
+        <li>Appendices count toward 9‑page limit (excluding refs).</li>
+        <li>Double‑blind review: anonymize submissions or desk‑rejection.</li>
+        <li>Rejected full papers not eligible as short papers.</li>
+        <li>LLM‑generated text only as experimental analysis; AI tools ok for light editing.</li>
       </ul>
-    </li>
+    </div>
 
-    <li><strong>Validation of Social Phenomenon</strong>
+    <div class="call-for-papers">
+      <h2>Call for Papers</h2>
       <ul>
-        <li><strong>Micro-level</strong>: Individual behaviors including event evolution, interaction patterns, interpersonal dynamics mechanisms, etc.</li>
-        <li><strong>Macro-level</strong>: Large-scale patterns including societal trends and emergent group behaviors characterizing social phenomena, etc.</li>
+        <li><strong>Alignment with Social Value</strong>
+          <ul>
+            <li><strong>Environment Construction</strong>: Text, virtual, embodied, etc.</li>
+            <li><strong>Agent Architecture</strong>: Memory, perception, preference, reflection, action, etc.</li>
+            <li><strong>Alignment and Personalization</strong>: RLHF, offline preference optimization, inference-time alignment, multi-dimensional alignment and role play, etc.</li>
+            <li><strong>Reasoning & Planning</strong>: RL from verifiable reward, multi-turn/long-horizon decision-making, etc.</li>
+          </ul>
+        </li>
+        <li><strong>Validation of Social Phenomenon</strong>
+          <ul>
+            <li><strong>Micro-level</strong>: Event evolution, interaction patterns, interpersonal dynamics, etc.</li>
+            <li><strong>Macro-level</strong>: Societal trends, emergent group behaviors, etc.</li>
+          </ul>
+        </li>
+        <li><strong>Evaluation Methodologies</strong>
+          <ul>
+            <li><strong>Metrics</strong>: Emotion, cognition, preferences, etc.</li>
+            <li><strong>Benchmarks</strong>: Testbeds, benchmarks, leaderboards, etc.</li>
+          </ul>
+        </li>
+        <li><strong>System Scalability</strong>
+          <ul>
+            <li><strong>Scale</strong>: Large populations, high-order interactions, etc.</li>
+            <li><strong>Efficiency</strong>: Parallel/distributed or resource-constrained systems.</li>
+            <li><strong>Scaling Law</strong>: Parameter & interaction scaling properties.</li>
+          </ul>
+        </li>
+        <li><strong>Practical Applications</strong>
+          <ul>
+            <li><strong>Toolkit</strong>: Platforms & codebases for LLM-based social simulations.</li>
+            <li><strong>Vertical Field</strong>: Games, healthcare, education, domain-specific use cases.</li>
+          </ul>
+        </li>
+        <li><strong>Ethical Considerations</strong>: Ethics, risks, bias, fairness, etc.</li>
       </ul>
-    </li>
-
-    <li><strong>Evaluation Methodologies</strong>
-      <ul>
-        <li><strong>Metrics</strong>: Metrics for emotion, cognition, preferences, etc.</li>
-        <li><strong>Benchmarks</strong>: Testbeds, benchmarks, leaderboard, etc.</li>
-      </ul>
-    </li>
-
-    <li><strong>System Scalability</strong>
-      <ul>
-        <li><strong>Scale</strong>: Large populations, high-order interactions, etc.</li>
-        <li><strong>Efficiency</strong>: Agent systems designed for parallel processing, distributed computing, or resource-constrained environments, etc.</li>
-        <li><strong>Scaling Law</strong>: Scaling law of parameter, interaction, etc.</li>
-      </ul>
-    </li>
-
-    <li><strong>Practical Applications</strong>
-      <ul>
-        <li><strong>Toolkit</strong>: Platforms, codebases or software for developing and deploying social simulations with large language models.</li>
-        <li><strong>Vertical Field</strong>: Applications in specific fields such as games and virtual worlds, healthcare and medicine, education, and other domain-specific use cases where social simulations and agent-based models are valuable.</li>
-      </ul>
-    </li>
-
-    <li><strong>Ethical Considerations</strong>: Ethics, risks, bias and fairness, etc.</li>
-  </ul>
+    </div>
 
     <footer>
-        &copy; Workshop on LASS
+      &copy; Workshop on LASS
     </footer>
-    
+
 </body>
 </html>
